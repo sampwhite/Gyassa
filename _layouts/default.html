@@ -35,10 +35,12 @@
 
       <section>
         <div id="title">
-          <a href="{{ '/' | relative_url }}" title="Home">
-            <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="Gyassa home" width="96" height="96" style="display:block;margin-bottom:15px;border:0;">
-          </a>
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <div style="display:flex;align-items:center;gap:18px;margin-bottom:10px;">
+            <a href="{{ '/' | relative_url }}" title="Home">
+              <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="Gyassa home" width="96" height="96" style="display:block;border:0;">
+            </a>
+            <h1 style="margin:0;line-height:1.1;">{{ site.title | default: site.github.repository_name }}</h1>
+          </div>
           <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>
           <hr>
           <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
