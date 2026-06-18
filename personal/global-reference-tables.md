@@ -7,7 +7,7 @@ title: Global Reference Tables
 
 *Mar 19 2012*
 
-This article is about whether certain types of data should be in version control systems and treated as source
+This post is about whether certain types of data should be in version control systems and treated as source
 code or whether they should be in database tables and treated as data. Let us say you are writing a web
 application which will allow users to input recipes for food. As part of your web application you decide that you
 need a list of the different types of spices that can be put on food. This table and its related tables would not
@@ -15,7 +15,7 @@ only list the spices, but the degree of hotness, a little snippet of the history
 comes from, methods of extraction from the plant, general popularity of the spice, the typical cost of the spice,
 the regional areas that favor the spice, the amount normally used for spicing a standard size dish, and tips for
 usage in creating dishes. The entries in this table and its companion children tables would be referenced by
-recipes, by users reporting about the usage of spices in message boards, functionality in the web site that
+recipes, by users reporting about the usage of spices in message boards, functionality in the website that
 determine the hotness of the dish based on the amount of various spices in the dish, recommendations of spices for
 different types of dishes, lists of spices for different regions in the world and so on. In other words, the table
 and its associated children tables are an example of a Global Reference Table. I use the singular when referencing
@@ -25,21 +25,21 @@ The problem is this. Where is this global reference table stored? The developers
 much about spices and do not believe that have the expertise to create an authoritative list of spices, so they
 know they need input from experts who have knowledge on spices. The first solution is to put the spice list into
 database tables and create a user interface to allow administrators or trusted users (the so-called experts) to add
-new spice entries and all the associated information to a spice. The second is to hardwire the choices into tables
+new spice entries and all the associated information to a spice. The second is to hard-wire the choices into tables
 in a source code file (preferably RDD formatted tables).
 
 The natural urge is to go with the first approach and put the data into database tables because it allows the
 developers to punt on the general problem of coming up with the list. I believe this is wrong. As counter-intuitive
-as it might sound, I believe it is better to hardwire the data into source code controlled text files.
+as it might sound, I believe it is better to hard-wire the data into source code controlled text files.
 
 Source code control systems (such as 'git') give you more than you might first think. For example, suppose you
-wanted to add some new spices to support Vietnamese specialties which you were going to feature on your food web
-site with a new Vietnamese recipe designer mobile app. You would like the new spices and the new functionality for
-Vietnamese specialties to go out at the same time on your web site. If both were in source code, it would happen
+wanted to add some new spices to support Vietnamese specialties which you were going to feature on your food website 
+with a new Vietnamese recipe designer mobile app. You would like the new spices and the new functionality for
+Vietnamese specialties to go out at the same time on your website. If both were in source code, it would happen
 naturally as part of your deployment process. Source code versioning systems give you natural large scale
-synchronized distributed transactions on the behavior of your web site. In sophisticated software development
+synchronized distributed transactions on the behavior of your website. In sophisticated software development
 environments, the whole build and deployment process leverages this feature of a source code control system to
-create targeted builds and deployments that control precisely what you want to have appear in your application.
+create targeted builds and deployments that control precisely what you want to appear in your application.
 
 On the other hand, if the spices were in a database that could be changed by administrators and privileges users,
 then you would lose the ability to have simple synchronized deployment of new features. Also, if you have demo,
@@ -72,9 +72,9 @@ separate new diff file that was overlaid on top of both the base source file and
 If the contributors wanted to have a coordination of propagating the changes in multiple different global reference
 tables, they could put diff files being applied to different tables into a single component.
 
-If after a certain period of time, the changes by the administrators and trusted users gained wide spread
+If after a certain period of time, the changes by the administrators and trusted users gained widespread
 acceptance, the core group of developers could roll the diff files into the main source file for the reference
-data, much in the same way they would merge in the changes from a offshoot branch of their main development tree.
+data, much in the same way they would merge in the changes from an offshoot branch of their main development tree.
 If a bundle of diffs happened to be captured into a single component, it would make the merging process simpler and
 easier to understand and control.
 

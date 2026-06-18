@@ -9,13 +9,13 @@ title: Dynamic Runtime Schema
 
 **Prelude**
 
-Before I launch into a discussion of the this topic, I wish to talk about a couple of frustrations I have with trying to
+Before I launch into a discussion of the topic, I wish to talk about a couple of frustrations I have with trying to
 find prior art. If you google the combination of words *dynamic*, *runtime*, and *schema* you do not find discussions
-about the general topic of dynamically building schema definitions during the runtime of an application. Instead you
+about the general topic of dynamically building schema definitions during the runtime of an application. Instead, you
 find odds and ends where somebody may be adding a few custom metadata fields or doing something with schema that just
 happens to be dynamic and the word *runtime* just happens to show up in the content. Other words I have tried are words
 such as *builder*, *definition*, and *designer* with likewise little profit. I have targeted code repositories such as
-*github* and the most I have found is graphql like solutions. I have a similar problem with *data-driven*. To me an
+*GitHub* and the most I have found is graphql like solutions. I have a similar problem with *data-driven*. To me an
 example of data-driven is when you take a graphics solution that has classes Point, Line, Triangle, Rectangle, Square,
 etc. and you turn all the classes into a single class called Polygon with a simple list of points and constraint
 criteria on the points. But with big data becoming such a popular subject, data-driven has become to mean the processing
@@ -35,11 +35,11 @@ If you have read the prior articles in this blog on runtime data differencing, o
 should be turned into data whenever it is reasonable to do so. When you take this approach to doing coding and apply it
 to schema, you find yourself at odds with popular practice. Popular practice is to define schema at compile time. You
 use reflection to dig through the definition of classes and pull in all the annotations. This is static schema where the
-entire design of endpoints or tables are defined directly as hardwired artifacts in the code itself. Currently the most
+entire design of endpoints or tables are defined directly as hardwired artifacts in the code itself. Currently, the most
 dominant version of this approach for Java is Spring Boot and Hibernate. The approach is popular because it has a quick
 on-ramp to getting a working solution and it, at least initially, can eliminate a lot of boilerplate code. I should say
 that there are many projects where using compile time schema makes a lot of sense. However, I wish to focus on projects
-where such an approach does **not** make sense, since from my google searching, there is little discussion on this
+where such an approach does **not** make sense, since from my Google searching, there is little discussion on this
 point.
 
 **Why Runtime Schema**
@@ -51,8 +51,8 @@ form applications. The general theme is that underlying engine that provides thi
 understanding of the database tables, or at least part of the database tables.
 
 However, there are other reasons for why you might want runtime schema. For example, many database applications follow
-common design patterns and you might want to separate the definition of those patterns from the other parts of your
-schema definition. For example, database tables tend to have a counter for a primary key and they have dates for
+common design patterns, and you might want to separate the definition of those patterns from the other parts of your
+schema definition. For example, database tables tend to have a counter for a primary key, and they have dates for
 tracking when the row was created and last updated. Other common patterns can show up. There may be columns to identify
 the consumer who owns the data, a transaction identifier to identify the last transaction that acted on the data, error
 report fields, state transition fields, and so on. And lastly (and sometimes critically), there may be a column whose
@@ -62,7 +62,7 @@ patterns, **protocol** fields. They are the price you pay in order to store the 
 application that uses runtime schema builders, the definitions of tables would be a core set of data fields, some custom
 indexes, and a list of references to the common design patterns. This definition would not have direct references to any
 of the protocol fields. The code would instead pull in the protocol fields from the referenced common design patterns.
-Also the code would build some preliminary queries focused on the protocol fields and supply the general logic for how
+Also, the code would build some preliminary queries focused on the protocol fields and supply the general logic for how
 the protocol fields are implemented.
 
 A similar argument can be made about endpoints. For example, there are commonly fields in the response data that
@@ -135,10 +135,10 @@ mean the type of the field would be a generic that would not be defined until a 
 definition. Another possibility is creating unions of types where if one type redundantly defines a field, the
 definition that is earliest in the list of types being joined would win (or some type of merging rule would be applied).
 And if you allow generic types and unions of types, then it is possible that you might not give a generic type a
-definition in an endpoint. Instead the definition of the type would be in the data itself. This would allow for true
+definition in an endpoint. Instead, the definition of the type would be in the data itself. This would allow for true
 dynamic types. The definition in this case could be a composition on already defined types. An example might be
 "List&lt;Items|Prices&gt;" with the pipe symbol indicating a union of the types Items and Prices. This string would
-occur in the JSON data and it would be used to dynamically determine the type to apply to the data.
+occur in the JSON data, and it would be used to dynamically determine the type to apply to the data.
 
 **When Dynamic Schema**
 
@@ -147,6 +147,6 @@ takes more time upfront before you get a working application. That objection has
 multiple teams of developers over many years, gets refactored many times, and changes dramatically to fit evolving
 requirements, the advantages of using runtime schema can be huge. It is when the application becomes a large complex but
 still growing and evolving construct that the power of data driven abstractions can really be felt. The different
-abstractions can be tested separately and changes to design usually occur in fewer places and with far fewer side-
-effects. Also, over time such applications start being much smaller in code size than the traditional sprawling
+abstractions can be tested separately and changes to design usually occur in fewer places and with far fewer side effects. 
+Also, over time such applications start being much smaller in code size than the traditional sprawling
 *compile-only* implementations.

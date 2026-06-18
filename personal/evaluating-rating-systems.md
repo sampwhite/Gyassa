@@ -7,7 +7,7 @@ title: Evaluating Rating Systems
 
 *Aug 30 2011*
 
-In my prior blog I suggested that head to head comparisons should be used to create numeric "chess-like" ratings using
+In my prior post I suggested that head-to-head comparisons should be used to create numeric "chess-like" ratings using
 the Elo Rating Model as a theoretical basis for the computations of ratings for various goods and services that are
 evaluated. But this brings up a question. How do you determine whether it is truly better?
 
@@ -32,7 +32,7 @@ estimated value for the winning percentage is a complicated function of the rati
 variable for the winning percentage with respect to the rating difference does **not** follow a standard probability
 distribution. How do we fix this?
 
-It turns out that Jeff Sonas has already done this work and you can find the formula at
+It turns out that Jeff Sonas has already done this work, and you can find the formula at
 http://www.kaggle.com/c/ChessRatings2/Details/Evaluation. The formula for a variance term coming from a single resolved
 match (the equivalent of one of the squares in the standard variance computation).
 

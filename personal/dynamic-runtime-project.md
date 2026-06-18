@@ -7,14 +7,14 @@ title: Dynamic Runtime Project
 
 *Mar 13 2019*
 
-For those who have read prior articles in this blog, you will see an emphasis on using data to drive application design.
+For those who have read prior posts in this pseudo-blog, you will see an emphasis on using data to drive application design.
 And when I say data, I do not mean data stored in database tables, but data created using code or stored in files in
 source code. Recently, I started trying to look for other developers that may have come to similar conclusions to my
 own, but I have yet to find a kindred soul. As I explained in the prior blog, this is due to the ambiguity in terms like
 *schema*, *runtime*, and *dynamic* making it impossible to create a good google search to find people with similar ideas
 to my own.
 
-I got so frustrated, that I asked the question, has anybody registered a domain name using a combination of my search
+I got so frustrated, that I asked, has anybody registered a domain name using a combination of my search
 terms? For example, picking two of the most generic of my terms, surely somebody has created a website with a domain
 name that joins the words *dynamic* and *runtime*. So I looked to see if there was a website with domain name
 *dynamicruntime.com* or *dynamicruntime.org* and I was shocked to discover that nobody had yet thought to register this

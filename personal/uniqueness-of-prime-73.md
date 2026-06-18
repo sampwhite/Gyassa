@@ -13,8 +13,8 @@ page on *73*. But I have my own particular reason for seeing it as special.
 We start with a question. But before get there, we start with some definitions. For integers *N* larger than *1*,
 consider the integers mod *N*. Or to put it another way, map integers to their remainders after dividing by *N*. The
 remainder will be a number between *0* and *N - 1*. You can add and multiply these remainders and take the remainder of
-the result. This creates well defined addition and multiplication mod *N*. Now, of these remainders, only take the non
-zero remainders that have no common factor with *N*. For example, if *N* is *6*, then only *1* and *5* satisfy this
+the result. This creates well-defined addition and multiplication mod *N*. Now, of these remainders, only take the 
+non-zero remainders that have no common factor with *N*. For example, if *N* is *6*, then only *1* and *5* satisfy this
 condition. In mathematics, these remainders under multiplication are called the multiplicative group mod *N*. It is
 **group** because it has an operation, multiplication, which combines two elements of the group to produce another
 element. Now in this multiplicative group, some elements have the property that if you square it, i.e. multiply it
@@ -32,7 +32,7 @@ symmetries, which are also dualities, are foundational. At every place you look 
 negative charges, up and down spin states for particles, clockwise vs. counterclockwise rotation, and on and on. The
 derivation of special relativity uses symmetries as its primary driving assumption. They are also at the foundation of a
 lot of the richer theories in mathematics as well. In our particular case, suppose we have determined the *N* that is
-the answer to the question, would primes that map to the identity element mod *N* have any special properties? And what
+the answer to the question, would prime numbers that map to the identity element mod *N* have any special properties? And what
 does this have to do with the prime *73*? If you have been reading any of the prior blog articles, you may be able to
 guess the answer. An answer can be found at [Largest N with All Order 2 Multiplicative Group Mod
 N](https://gist.github.com/sampwhite/a22e248bd724a46dc3796ea8be428196).

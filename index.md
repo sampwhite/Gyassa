@@ -4,7 +4,7 @@ title: Gyassa
 permalink: /
 ---
 
-# Gyassa
+# Gyassa Pseudo Blog
 
 Writings on software design, ratings, and the occasional bit of mathematics. Posts are listed below, newest first.
 

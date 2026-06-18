@@ -11,7 +11,7 @@ This post (though some time separates this post from the previous) follows a sim
 want to give my thoughts on the general problem of configuration. And when I say configuration, I am not talking about
 simple things like database connections, load balancers, and deployments. Nor am I talking about the type of
 configuration usually found in config files consisting of simple name-value pairs providing simple tweaks to the
-behavior of a running application. Instead I am talking about the type of configuration that can be found in tables or
+behavior of a running application. Instead, I am talking about the type of configuration that can be found in tables or
 large complex documents.
 
 One mistake, and I believe it to be a mistake, is that in many cases this configuration is supplied through endpoints
@@ -20,7 +20,7 @@ has some large accounts which we will call clients. For each client, the client 
 those goods, rules for allowing discounts, and rules for mechanisms of delivery. You can also imagine that they might
 also supply rich content around those goods, such as images, descriptions, and technical specifications. These clients
 sell their goods to buyers for corporations. An example of such an application would be a standard B2B (business to
-business) commerce web site.
+business) commerce website.
 
 A traditional approach to providing this functionality is for the solution provider to create administrative endpoints,
 accessible by the client, where the client can provide the content and rules. However, problems begin to arise. For
@@ -40,17 +40,17 @@ and script containing all the desired configuration for a client. If the configu
 importing other shared file resources or overlaying on other configuration, it is quite possible to create a fairly
 compact and flexible implementation. The files can be version controlled and pre-existing art can easily be migrated
 into the new configuration files. And with a bit of cleverness, common implementations can be turned into templates and
-the templates can be be imported (by reference, not by making copy) into a new configuration and then overlaid by
+the templates can be imported (by reference, not by making copy) into a new configuration and then overlaid by
 elements of the new configuration.
 
 The usual criticism of this approach is that there is no natural path to a GUI that allows an admin level user to
 implement their desired configuration in a particular website. However, with some thought this issue can be resolved. An
 administrative interface can be made to build prototype content for configuration bundles and edit the simpler contents
-of these files. These files can then be deployed using an admin endpoint to deploy config bundles. However this approach
+of these files. These files can then be deployed using an admin endpoint to deploy config bundles. However, this approach
 has limitations. Usually the administrative interface can only do relatively simple things and more complex
 configurations require hand editing of the files. This may appear like a limitation specific to this approach, however
 this overlooks the fact that the original simple endpoints approach had similar issues. The truth was that
-administrators were hand crafting JSON to call against the admin endpoints and bypassing the admin GUI anyway.
+administrators were handcrafting JSON to call against the admin endpoints and bypassing the admin GUI anyway.
 
 If your configuration consists of config bundles then the contents of those bundles can easily be versioned controlled
 by the normal source code control process and can be propagated through staging servers much like changes to source code
@@ -61,7 +61,7 @@ tends not to go through the same unit testing and QA process that source code is
 
 So the truth is that you are essentially letting your clients write source code for your system, and you should only
 allow them to do that if you can version control it for them in your source code repositories. I suspect that when you
-upload an mobile app to Apple and ask them to approve it that the first thing they do is throw the interior elements of
+upload a mobile app to Apple and ask them to approve it that the first thing they do is throw the interior elements of
 the app into a version control system so they can make it go through a standard QA approval process. They can also use
 such a storage system to look for similarities with apps they know to have caused problems in the past.
 
@@ -91,7 +91,7 @@ the identifier-key server. If they cannot find them, then should first create a 
 proposed new unique string identifiers and that bundle would have to be validated before the full configuration bundle
 could be considered for deployment.
 
-At first, this may seem like a bit of a encumbrance, but if you set up a bit of admin GUI, you can speed the process
+At first, this may seem like a bit of an encumbrance, but if you set up a bit of admin GUI, you can speed the process
 along. New unique identifiers are relatively easy to QA and validate and once you have done so, a lot of good things can
 come from this. One of the biggest is that it can greatly ease the problem of transferring configurations from one
 environment to another. Since every web instance has access to the contents of the identifier-key server, all of them
