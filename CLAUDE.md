@@ -1,19 +1,71 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with this repository.
 
-## Overview
+## Purpose
 
-This is a GitHub Pages site hosted at [github.com/sampwhite/Gyassa](https://github.com/sampwhite/Gyassa), using the `jekyll-theme-midnight` Jekyll theme. Content is served directly by GitHub Pages — there is no local build step required.
+This repository is **gyassa.com** — the "pseudo blog" of Samuel White / Gyassa Software. It is a small
+collection of essays on software design, rating systems, and the occasional bit of mathematics. It is a
+content site, not an application: the "code" is Markdown, a little HTML, and Jekyll configuration.
 
-## Structure
+## How it is built
 
-- `index.md` — the single page of site content (Jekyll front matter + Markdown)
-- `_config.yml` — Jekyll configuration (currently just sets the theme)
-- `_includes/head-custom.html` — injects favicons and the web manifest link into `<head>`
-- `site.webmanifest` — PWA manifest (currently with blank name fields)
-- Favicon images at various sizes for browser, Apple, and Android
+It is a [Jekyll](https://jekyllrb.com/) site served by **GitHub Pages**, using the `jekyll-theme-midnight`
+theme (`_config.yml`). GitHub Pages runs the Jekyll build server-side on every push — **there is no local
+build step, no Gemfile, and no CI pipeline**. You edit Markdown/HTML and push; GitHub renders it.
+
+Jekyll turns each `.md` file into an `.html` page, so **inter-page links use the `.html` extension** even
+though the source is `.md` (e.g. a post links another as `personal/other-post.html`). Markdown is rendered
+by kramdown, which treats a **single newline inside a paragraph as a space** (no `<br>`), so prose can be
+hard-wrapped without changing the output.
+
+### Layout of files
+
+- `index.md` — the landing page (`permalink: /`): a short intro plus the **reverse-chronological index of
+  posts**. Each post has an entry here; adding a post means adding an entry (see conventions below).
+- `personal/` — the post source files, one `.md` per essay, plus `personal/files/` for attachments
+  (a PDF, a zip) that some posts link to.
+- `_layouts/default.html` — a **custom** layout (overrides the theme's): renders the site logo + title
+  header and the "Pseudo Blog" credit line, then `{{ content }}`. All pages use `layout: default`.
+- `_includes/head-custom.html` — injected into `<head>`: favicons, the PWA manifest link, and **MathJax**
+  (LaTeX via `$…$` inline and `$$…$$` display — used by the number-theory post).
+- `_config.yml` — Jekyll config (currently just the theme).
+- `CNAME` — the custom domain, `gyassa.com`.
+- `404.md` — custom not-found page.
+- `site.webmanifest`, `favicon*.png`, `favicon.ico`, `apple-touch-icon.png`, `android-chrome-*.png` — PWA
+  manifest and icon assets.
+
+## Post conventions
+
+A post is a Markdown file in `personal/`. Follow the existing posts:
+
+- **Front matter**: `layout: default` and a `title:`.
+- **Body**: an H1 matching the title, then an italic date line, then the content. In-post date format is
+  `*Mon D, YYYY*` (with the comma, e.g. `*Jul 5, 2026*`).
+- **Line wrapping**: hard-wrap prose at **≤120 characters** (kramdown makes single newlines render as
+  spaces, so this is purely for clean diffs and future edits). Keep a whole `[text](url)` link on one line.
+- **Math**: use MathJax delimiters (`$…$`, `$$…$$`).
+- **Publishing** a post means adding it to the Posts list in `index.md`, newest first:
+  ```
+  - **[Title](personal/slug.html)** — *Mon DD YYYY*  ⏎
+    One-line blurb.
+  ```
+  Note the index conventions differ slightly from in-post: the index date has **no comma** (`Jul 5 2026`),
+  the title line ends with **two trailing spaces** (a hard break) before the blurb, and each blurb is a
+  **single long line** (the index is not wrapped at 120).
+- **AI-authored posts**: some posts are written by an AI rather than by Sam. When a post is AI-authored,
+  it says so and names the model (e.g. "Claude Opus 4.8, model id `claude-opus-4-8`"), writes in the AI's
+  first person, and links the human piece it relates to. See
+  `personal/kotlin-dynamic-runtime-project-ai.md`.
 
 ## Deploying
 
-Push to the `main` branch on `origin` — GitHub Pages picks it up automatically. There is no CI or build pipeline.
+Push to `main` on `origin` — GitHub Pages rebuilds and serves it at gyassa.com automatically. No branch,
+review gate, or CI stands between a push and the live site, so push deliberately.
+
+## Task tracking
+
+Tasks for this site have been tracked as issues in a **separate** repository, `sampwhite/Actions` (this
+repo's own GitHub issues are not the tracker). A typical flow: read the task from an `Actions` issue, do
+the work here in Gyassa, reference the issue in the commit (`Addresses sampwhite/Actions#N`), push, then
+close it there (`gh issue close N -R sampwhite/Actions`).
