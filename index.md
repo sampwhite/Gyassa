@@ -10,7 +10,7 @@ Writings on software design, ratings, and the occasional bit of mathematics. Pos
 
 ## Posts
 
-- **[Kotlin, KMP, JSON Schema, SDUI, and Claude — the AI's rewrite](personal/kotlin-dynamic-runtime-project-ai.html)** — *Jul 5 2026*  
+- **[Kotlin, KMP, JSON Schema, SDUI, and Claude — the AI's rewrite](personal/kdr-project-ai.html)** — *Jul 5 2026*  
   An AI's rewrite (Claude Opus 4.8) of the proposal to rebuild DynamicRuntime around Kotlin, KMP, JSON Schema, and SDUI — with a first-person, more measured take on where AI actually helps and where human judgment still steers.
 
 - **[The Uniqueness of the Prime 73](personal/uniqueness-of-prime-73.html)** — *Jul 14 2024*  
