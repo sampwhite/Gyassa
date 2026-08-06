@@ -5,7 +5,7 @@ title: First Post
 
 # First Post
 
-*Sep 02 2010*
+*Sep 2, 2010*
 
 This is the first post for Gyassa Software, a newly formed entity owned by Samuel White and Eva Cordes. Sam and Eva are
 the founding developers for the Stellent "Content Management System" (CMS). Three years ago Stellent was acquired by

@@ -5,7 +5,7 @@ title: The Uniqueness of the Prime 73
 
 # The Uniqueness of the Prime 73
 
-*Jul 14 2024*
+*Jul 14, 2024*
 
 I am not the only one to think *73* is special. See [73 (number)](https://en.wikipedia.org/wiki/73_(number)) for a Wiki
 page on *73*. But I have my own particular reason for seeing it as special.

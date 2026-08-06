@@ -5,7 +5,7 @@ title: Application Configuration
 
 # Application Configuration
 
-*Jun 23 2017*
+*Jun 23, 2017*
 
 This post (though some time separates this post from the previous) follows a similar theme from prior posts. This time I
 want to give my thoughts on the general problem of configuration. And when I say configuration, I am not talking about

@@ -5,7 +5,7 @@ title: Rated Multiplayer Competitions
 
 # Rated Multiplayer Competitions
 
-*Jun 22 2011*
+*Jun 22, 2011*
 
 In my idle time, I have been playing various computer games. Some of these games (such as World of Warcraft) feature
 randomly assembled teams that compete against each other. After playing these team player vs. player (PVP) games for a

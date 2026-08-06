@@ -5,7 +5,7 @@ title: Dynamic Runtime Schema
 
 # Dynamic Runtime Schema
 
-*Nov 14 2018*
+*Nov 14, 2018*
 
 **Prelude**
 

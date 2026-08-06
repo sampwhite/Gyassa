@@ -5,7 +5,7 @@ title: Wonders of Ratings
 
 # Wonders of Ratings
 
-*Aug 23 2011*
+*Aug 23, 2011*
 
 Please read the earlier post for more on ratings.
 

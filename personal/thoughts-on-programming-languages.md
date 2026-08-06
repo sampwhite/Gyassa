@@ -5,7 +5,7 @@ title: Thoughts on Programming Languages
 
 # Thoughts on Programming Languages
 
-*Sep 03 2017*
+*Sep 3, 2017*
 
 Over my many years (actually decades now) of my time as a programmer, one of the favorite discussion among programmers
 is on the relative merits of various programming languages. In this particular post, I thought I would write a

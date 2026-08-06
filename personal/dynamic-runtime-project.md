@@ -5,7 +5,7 @@ title: Dynamic Runtime Project
 
 # Dynamic Runtime Project
 
-*Mar 13 2019*
+*Mar 13, 2019*
 
 For those who have read prior posts in this pseudo-blog, you will see an emphasis on using data to drive application design.
 And when I say data, I do not mean data stored in database tables, but data created using code or stored in files in

@@ -40,19 +40,22 @@ hard-wrapped without changing the output.
 A post is a Markdown file in `personal/`. Follow the existing posts:
 
 - **Front matter**: `layout: default` and a `title:`.
-- **Body**: an H1 matching the title, then an italic date line, then the content. In-post date format is
-  `*Mon D, YYYY*` (with the comma, e.g. `*Jul 5, 2026*`).
+- **Body**: an H1 matching the title, then an italic date line, then the content. The date format is
+  `*Mon D, YYYY*` — comma after the day, and no zero-padding on the day (`*Jul 5, 2026*`, not
+  `*Jul 05 2026*`). The same format is used in `index.md`. Older posts predating this site carried a
+  comma-less form imported from its previous host; those have been normalised, so anything without a
+  comma is now a mistake rather than a variant.
 - **Line wrapping**: hard-wrap prose at **≤120 characters** (kramdown makes single newlines render as
   spaces, so this is purely for clean diffs and future edits). Keep a whole `[text](url)` link on one line.
 - **Math**: use MathJax delimiters (`$…$`, `$$…$$`).
 - **Publishing** a post means adding it to the Posts list in `index.md`, newest first:
   ```
-  - **[Title](personal/slug.html)** — *Mon DD YYYY*  ⏎
+  - **[Title](personal/slug.html)** — *Mon D, YYYY*  ⏎
     One-line blurb.
   ```
-  Note the index conventions differ slightly from in-post: the index date has **no comma** (`Jul 5 2026`),
-  the title line ends with **two trailing spaces** (a hard break) before the blurb, and each blurb is a
-  **single long line** (the index is not wrapped at 120).
+  The date is formatted exactly as in-post. The index differs in two ways: the title line ends with **two
+  trailing spaces** (a hard break) before the blurb, and each blurb is a **single long line** (the index is
+  not wrapped at 120).
 - **AI-authored posts**: some posts are written by an AI rather than by Sam. When a post is AI-authored,
   it says so and names the model (e.g. "Claude Opus 4.8, model id `claude-opus-4-8`"), writes in the AI's
   first person, and links the human piece it relates to. See

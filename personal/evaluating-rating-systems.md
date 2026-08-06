@@ -5,7 +5,7 @@ title: Evaluating Rating Systems
 
 # Evaluating Rating Systems
 
-*Aug 30 2011*
+*Aug 30, 2011*
 
 In my prior post I suggested that head-to-head comparisons should be used to create numeric "chess-like" ratings using
 the Elo Rating Model as a theoretical basis for the computations of ratings for various goods and services that are

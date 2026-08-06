@@ -5,7 +5,7 @@ title: Why Gyassa?
 
 # Why Gyassa?
 
-*Sep 12 2010*
+*Sep 12, 2010*
 
 When we were trying to choose a name for our new company we found that it is quite difficult to find a novel and
 interesting name that is not already taken. When we looked through the names that were already taken, we found that

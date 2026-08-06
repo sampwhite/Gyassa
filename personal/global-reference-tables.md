@@ -5,7 +5,7 @@ title: Global Reference Tables
 
 # Global Reference Tables
 
-*Mar 19 2012*
+*Mar 19, 2012*
 
 This post is about whether certain types of data should be in version control systems and treated as source
 code or whether they should be in database tables and treated as data. Let us say you are writing a web
