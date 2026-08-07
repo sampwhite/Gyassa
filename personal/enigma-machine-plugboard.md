@@ -63,9 +63,9 @@ suffered by the actual decoders. A real codebreaker would sometimes be wrong whe
 had a German word appearing in the examined text. This can lead them down a wrong path, a scenario not
 simulated by our test code.
 
-Here the Germans tended to be generous, using the same phrases in many of their messages. So it is quite believable
-that the plugboard was cracked without too much effort. But the effort was in getting the crib, not in the
-deduction that followed, and the books did not emphasize this fact.
+However, the Germans tended to be generous, using the same phrases in many of their messages, and getting ample cribs
+tended not to be an issue. So it is quite believable that the plugboard was cracked without too much effort. But 
+the effort was in getting the crib, not in the deduction that followed, and the books did not emphasize this fact.
 
 The code can be found at
 [Enigma Plugboard Deduction Investigation](https://gwc-experiment.appspot.com/?gist=sampwhite/b35817f35451748cc0ca6e73f6045d05#47lfPiKHe2).
