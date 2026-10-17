@@ -4,6 +4,9 @@ title: Gyassa Software
 permalink: /
 ---
 
+# Consulting, and an open-source application for forms and workflows
+
+{: .lede}
 Gyassa Software is Samuel White and Eva Cordes. We founded it in 2010, after years as the founding developers of the
 Stellent content management system, which Oracle acquired and sold as Oracle Universal Content Management (UCM).
 
@@ -18,14 +21,18 @@ open source under the MIT license, and it was written by AI under our direction.
 
 ## Where to find things
 
-- **[dynamicruntime.com](https://dynamicruntime.com)** — Gedra and our consulting services: what we build and how
-  we work.
-- **[dynamicruntime.org](https://dynamicruntime.org)** — the software running live, to try for yourself. Its data is
-  cleared from time to time.
-- **[KotlinDynamicRuntime on GitHub](https://github.com/sampwhite/KotlinDynamicRuntime)** — the source code and its
-  documentation.
-- **[Sam White's blog](blog.html)** — essays on software design, ratings, and the occasional bit of mathematics,
-  including [the proposal behind the project](personal/kotlin-dynamic-runtime-project.html).
+<div class="cards">
+<a class="card" href="https://dynamicruntime.com"><strong>dynamicruntime.com</strong><span>Gedra and our consulting
+services: what we build and how we work.</span></a>
+<a class="card" href="https://dynamicruntime.org"><strong>dynamicruntime.org</strong><span>The software running live,
+to try for yourself. Its data is cleared from time to time.</span></a>
+<a class="card" href="https://github.com/sampwhite/KotlinDynamicRuntime"><strong>GitHub</strong><span>The source code
+of KotlinDynamicRuntime and its documentation, under the MIT license.</span></a>
+<a class="card" href="blog.html"><strong>Sam White's blog</strong><span>Essays on software design, ratings, and the
+occasional bit of mathematics.</span></a>
+</div>
+
+The blog includes [the proposal behind the project](personal/kotlin-dynamic-runtime-project.html).
 
 ## Contact
 

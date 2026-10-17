@@ -13,8 +13,9 @@ Markdown, a little HTML, and Jekyll configuration.
 
 ## How it is built
 
-It is a [Jekyll](https://jekyllrb.com/) site served by **GitHub Pages**, using the `jekyll-theme-midnight`
-theme (`_config.yml`). GitHub Pages runs the Jekyll build server-side on every push — **there is no local
+It is a [Jekyll](https://jekyllrb.com/) site served by **GitHub Pages**. `_config.yml` still names the
+`jekyll-theme-midnight` theme, but the custom layout no longer loads any of its styles: the look is the site's
+own stylesheet, `assets/css/gyassa.css`. GitHub Pages runs the Jekyll build server-side on every push — **there is no local
 build step, no Gemfile, and no CI pipeline**. You edit Markdown/HTML and push; GitHub renders it.
 
 Jekyll turns each `.md` file into an `.html` page, so **inter-page links use the `.html` extension** even
@@ -32,9 +33,14 @@ hard-wrapped without changing the output.
   move or rename a post.
 - `personal/` — the post source files, one `.md` per essay, plus `personal/files/` for attachments
   (a PDF, a zip) that some posts link to.
-- `_layouts/default.html` — a **custom** layout (overrides the theme's): renders the site logo + title
-  header, a navigation line (Home · Sam White's blog · Contact), and the credit line, then — on post pages
-  (under `/personal/`) — a link back to the blog, then `{{ content }}`. All pages use `layout: default`.
+- `_layouts/default.html` — a **custom** layout (overrides the theme's): a header (the Gyassa logo and name,
+  then Home · Sam White's blog · Contact), the page in a left-aligned content column (on post pages, under
+  `/personal/`, after a link back to the blog), and a footer. All pages use `layout: default`.
+- `assets/css/gyassa.css` — the only stylesheet. It shares its palette, type, and light/dark behavior with
+  dynamicruntime.com (`sampwhite/KdrCommercial`, `dyncom/site/assets/site.css`) so the two sites read as one
+  family; keep them in step. Two classes are set from Markdown with kramdown's `{: .class}` line before a
+  block: `.lede` (the home page's opening paragraph) and `.posts` (the post list in `blog.md`, which must
+  keep its `{: .posts}` line). The home page's "where to find things" cards are raw HTML (`.cards`, `.card`).
 - `_includes/head-custom.html` — injected into `<head>`: favicons, the PWA manifest link, and **MathJax**
   (LaTeX via `$…$` inline and `$$…$$` display — used by the number-theory post).
 - `_config.yml` — Jekyll config: the theme, the site `title` and `description` (shown in the header and

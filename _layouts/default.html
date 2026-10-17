@@ -2,43 +2,65 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-{% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/gyassa.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
   <body>
-    <div class="wrapper">
+    {% assign inBlog = false %}
+    {% if page.url == '/blog.html' or page.url contains '/personal/' %}{% assign inBlog = true %}{% endif %}
 
-      <section>
-        <div id="title">
-          <div style="display:flex;align-items:center;gap:18px;margin-bottom:10px;">
-            <a href="{{ '/' | relative_url }}" title="Home">
-              <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="Gyassa home" width="96" height="96" style="display:block;border:0;">
-            </a>
-            <h1 style="margin:0;line-height:1.1;">{{ site.title | default: site.github.repository_name }}</h1>
-          </div>
-          <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>
-          <p style="margin:0 0 10px;">
-            <a href="{{ '/' | relative_url }}">Home</a> &middot;
-            <a href="{{ '/blog.html' | relative_url }}">Sam White's blog</a> &middot;
-            <a href="mailto:contact@gyassa.com">Contact</a>
-          </p>
-          <hr>
-          <span class="credits left">Maintained by <a href="{{ '/' | relative_url }}">Gyassa Software</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="" width="44" height="44">
+          <span class="brand-name">{{ site.title }}</span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+          <a href="{{ '/blog.html' | relative_url }}"{% if inBlog %} aria-current="page"{% endif %}>Sam White's blog</a>
+          <a class="button" href="mailto:contact@gyassa.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="content">
+          {% if page.url contains '/personal/' %}
+          <p class="back"><a href="{{ '/blog.html' | relative_url }}">&larr; Sam White's blog</a></p>
+          {% endif %}
+
+          {{ content }}
         </div>
+      </div>
+    </main>
 
-        {% if page.url contains '/personal/' %}
-        <p><a href="{{ '/blog.html' | relative_url }}">&larr; Sam White's blog</a></p>
-        {% endif %}
-
-        {{ content }}
-
-      </section>
-
-    </div>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div>
+          <h4>Gyassa Software</h4>
+          <p>Samuel White and Eva Cordes: consulting, and an open-source application for forms and workflows.</p>
+          <p><a href="mailto:contact@gyassa.com">contact@gyassa.com</a></p>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <ul>
+            <li><a href="https://dynamicruntime.com">dynamicruntime.com</a>: Gedra and our consulting services</li>
+            <li><a href="https://dynamicruntime.org">dynamicruntime.org</a>: the software running live</li>
+            <li><a href="https://github.com/sampwhite/KotlinDynamicRuntime">GitHub</a>: the source code, MIT licensed</li>
+          </ul>
+        </div>
+        <div>
+          <h4>This site</h4>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/blog.html' | relative_url }}">Sam White's blog</a></li>
+            <li>Hosted on GitHub Pages</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

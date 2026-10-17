@@ -10,6 +10,7 @@ Writings on software design, ratings, and the occasional bit of mathematics, by 
 
 ## Posts
 
+{: .posts}
 - **[Enigma Machine and Deduction of the Plugboard](personal/enigma-machine-plugboard.html)** — *Aug 6, 2026*  
   A lingering question after my tour of England investigating the roots of modern cryptography and computers. Includes a link to code that
   simulates the Enigma machine and was used to investigate the question.
