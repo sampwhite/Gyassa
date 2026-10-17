@@ -4,9 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 
 ## Purpose
 
-This repository is **gyassa.com** — the "pseudo blog" of Samuel White / Gyassa Software. It is a small
-collection of essays on software design, rating systems, and the occasional bit of mathematics. It is a
-content site, not an application: the "code" is Markdown, a little HTML, and Jekyll configuration.
+This repository is **gyassa.com** — the site of Gyassa Software (Samuel White and Eva Cordes). Its home page
+gives the essential facts about the company and links to dynamicruntime.com (the marketing site, kept in
+`sampwhite/KdrCommercial`) and dynamicruntime.org (the live KDR reference instance). Beside it is **Sam White's
+blog**: essays on software design, rating systems, and the occasional bit of mathematics. The home page is
+informational; marketing belongs on dynamicruntime.com. It is a content site, not an application: the "code" is
+Markdown, a little HTML, and Jekyll configuration.
 
 ## How it is built
 
@@ -21,15 +24,21 @@ hard-wrapped without changing the output.
 
 ### Layout of files
 
-- `index.md` — the landing page (`permalink: /`): a short intro plus the **reverse-chronological index of
-  posts**. Each post has an entry here; adding a post means adding an entry (see conventions below).
+- `index.md` — the home page (`permalink: /`): facts about Gyassa Software, where to find things, contact.
+- `blog.md` — **Sam White's blog** (`/blog.html`): a short intro plus the **reverse-chronological index of
+  posts**. Each post has an entry here; adding a post means adding an entry (see conventions below). It is
+  `/blog.html`, not `/blog/`, so its relative `personal/…` links resolve.
+- Post URLs (`/personal/<slug>.html`) are linked from outside (the KDR README, dynamicruntime.com): never
+  move or rename a post.
 - `personal/` — the post source files, one `.md` per essay, plus `personal/files/` for attachments
   (a PDF, a zip) that some posts link to.
 - `_layouts/default.html` — a **custom** layout (overrides the theme's): renders the site logo + title
-  header and the "Pseudo Blog" credit line, then `{{ content }}`. All pages use `layout: default`.
+  header, a navigation line (Home · Sam White's blog · Contact), and the credit line, then — on post pages
+  (under `/personal/`) — a link back to the blog, then `{{ content }}`. All pages use `layout: default`.
 - `_includes/head-custom.html` — injected into `<head>`: favicons, the PWA manifest link, and **MathJax**
   (LaTeX via `$…$` inline and `$$…$$` display — used by the number-theory post).
-- `_config.yml` — Jekyll config (currently just the theme).
+- `_config.yml` — Jekyll config: the theme, the site `title` and `description` (shown in the header and
+  used by the SEO tag).
 - `CNAME` — the custom domain, `gyassa.com`.
 - `404.md` — custom not-found page.
 - `site.webmanifest`, `favicon*.png`, `favicon.ico`, `apple-touch-icon.png`, `android-chrome-*.png` — PWA
@@ -42,13 +51,13 @@ A post is a Markdown file in `personal/`. Follow the existing posts:
 - **Front matter**: `layout: default` and a `title:`.
 - **Body**: an H1 matching the title, then an italic date line, then the content. The date format is
   `*Mon D, YYYY*` — comma after the day, and no zero-padding on the day (`*Jul 5, 2026*`, not
-  `*Jul 05 2026*`). The same format is used in `index.md`. Older posts predating this site carried a
+  `*Jul 05 2026*`). The same format is used in `blog.md`. Older posts predating this site carried a
   comma-less form imported from its previous host; those have been normalised, so anything without a
   comma is now a mistake rather than a variant.
 - **Line wrapping**: hard-wrap prose at **≤120 characters** (kramdown makes single newlines render as
   spaces, so this is purely for clean diffs and future edits). Keep a whole `[text](url)` link on one line.
 - **Math**: use MathJax delimiters (`$…$`, `$$…$$`).
-- **Publishing** a post means adding it to the Posts list in `index.md`, newest first:
+- **Publishing** a post means adding it to the Posts list in `blog.md`, newest first:
   ```
   - **[Title](personal/slug.html)** — *Mon D, YYYY*  ⏎
     One-line blurb.

@@ -6,15 +6,7 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include head-custom.html %}
   </head>
   <body>
@@ -29,10 +21,19 @@
             <h1 style="margin:0;line-height:1.1;">{{ site.title | default: site.github.repository_name }}</h1>
           </div>
           <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>
+          <p style="margin:0 0 10px;">
+            <a href="{{ '/' | relative_url }}">Home</a> &middot;
+            <a href="{{ '/blog.html' | relative_url }}">Sam White's blog</a> &middot;
+            <a href="mailto:contact@gyassa.com">Contact</a>
+          </p>
           <hr>
-          <span class="credits left">Pseudo Blog maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <span class="credits left">Maintained by <a href="{{ '/' | relative_url }}">Gyassa Software</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
         </div>
+
+        {% if page.url contains '/personal/' %}
+        <p><a href="{{ '/blog.html' | relative_url }}">&larr; Sam White's blog</a></p>
+        {% endif %}
 
         {{ content }}
 
