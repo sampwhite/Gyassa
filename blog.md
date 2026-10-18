@@ -11,6 +11,9 @@ Writings on software design, ratings, and the occasional bit of mathematics, by 
 ## Posts
 
 {: .posts}
+- **[Gedra, and Why AI Makes Open Foundations the Product](personal/gedra-ai-impacts.html)** — *Oct 18, 2026*  
+  How naming Gedra led to a bigger question: when AI makes applications disposable, what is missing is an open, self-contained foundation that handles the overhead every application needs, which is what KotlinDynamicRuntime aims to be.
+
 - **[Enigma Machine and Deduction of the Plugboard](personal/enigma-machine-plugboard.html)** — *Aug 6, 2026*  
   A lingering question after my tour of England investigating the roots of modern cryptography and computers. Includes a link to code that
   simulates the Enigma machine and was used to investigate the question.
