@@ -7,8 +7,11 @@ permalink: /
 # Consulting, and an open-source application for forms and workflows
 
 {: .lede}
-Gyassa Software is Samuel White and Eva Cordes. We founded it in 2010, after years as the founding developers of the
-Stellent content management system, which Oracle acquired and sold as Oracle Universal Content Management (UCM).
+Gyassa Software is [Samuel White](https://www.linkedin.com/in/samuel-white-312a6422) and
+[Eva Cordes](https://www.linkedin.com/in/eva-cordes-7b988937), the founding developers of the Stellent content
+management system, which Oracle acquired and sold as Oracle Universal Content Management (UCM). We founded Gyassa
+Software in 2010, but spent most of the years since building the same kind of software for other companies. In 2026
+we revived it to offer that experience directly.
 
 ## What we do
 
