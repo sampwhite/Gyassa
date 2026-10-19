@@ -13,7 +13,7 @@ page on *73*. But I have my own particular reason for seeing it as special.
 We start with a question. But before get there, we start with some definitions. For integers *N* larger than *1*,
 consider the integers mod *N*. Or to put it another way, map integers to their remainders after dividing by *N*. The
 remainder will be a number between *0* and *N - 1*. You can add and multiply these remainders and take the remainder of
-the result. This creates well-defined addition and multiplication mod *N*. Now, of these remainders, only take the 
+the result. This creates well-defined addition and multiplication mod *N*. Now, of these remainders, only take the
 non-zero remainders that have no common factor with *N*. For example, if *N* is *6*, then only *1* and *5* satisfy this
 condition. In mathematics, these remainders under multiplication are called the multiplicative group mod *N*. It is
 **group** because it has an operation, multiplication, which combines two elements of the group to produce another

@@ -33,7 +33,7 @@ developers to punt on the general problem of coming up with the list. I believe 
 as it might sound, I believe it is better to hard-wire the data into source code controlled text files.
 
 Source code control systems (such as 'git') give you more than you might first think. For example, suppose you
-wanted to add some new spices to support Vietnamese specialties which you were going to feature on your food website 
+wanted to add some new spices to support Vietnamese specialties which you were going to feature on your food website
 with a new Vietnamese recipe designer mobile app. You would like the new spices and the new functionality for
 Vietnamese specialties to go out at the same time on your website. If both were in source code, it would happen
 naturally as part of your deployment process. Source code versioning systems give you natural large scale

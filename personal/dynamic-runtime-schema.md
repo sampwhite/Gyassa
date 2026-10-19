@@ -147,6 +147,6 @@ takes more time upfront before you get a working application. That objection has
 multiple teams of developers over many years, gets refactored many times, and changes dramatically to fit evolving
 requirements, the advantages of using runtime schema can be huge. It is when the application becomes a large complex but
 still growing and evolving construct that the power of data driven abstractions can really be felt. The different
-abstractions can be tested separately and changes to design usually occur in fewer places and with far fewer side effects. 
+abstractions can be tested separately and changes to design usually occur in fewer places and with far fewer side effects.
 Also, over time such applications start being much smaller in code size than the traditional sprawling
 *compile-only* implementations.

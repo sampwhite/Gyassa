@@ -58,6 +58,6 @@ justifications can be judged in "head-to-head" competitive fashion.
 
 An interesting thing occurs if you use a "head-to-head" competitive solution for producing your ratings. You get numeric
 ratings for all the content being judged not just a judgment of the relative ranking. For example, if this was done for
-hotels, it might turn out that the top three hotels might be very close in ratings, while the next tier has a large 
+hotels, it might turn out that the top three hotels might be very close in ratings, while the next tier has a large
 drop-off in ratings. If I were looking to book a good hotel, I might judge that the top three are close enough in rating that
 other criteria such as price, location, convenience might become more important.

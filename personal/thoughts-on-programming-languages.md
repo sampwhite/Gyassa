@@ -43,7 +43,7 @@ fully declared and there are usually fewer convenience features to minimize the 
 written. For me, the thing that causes me the most pain in static languages is the thing that gives its virtue, the time
 it takes to compile the code. Given two different static languages, I will tend to prefer the one with a faster compile
 time, even if it means that programming in the language is more laborious. Two good examples of this are C vs C++ and
-Java vs Scala. In C, it is quite difficult to write object-oriented programming and in Java it is hard to write 
+Java vs Scala. In C, it is quite difficult to write object-oriented programming and in Java it is hard to write
 multithreaded programming that glues together or composes function blocks. In C++, if you limit your use of more complex
 constructions, such as multi-inheritance of multi-parameterized types, the compile time expense is not that much
 greater. As for Scala, I feel it to be an unusable language based solely on its compile time, though I have never seen
@@ -73,7 +73,7 @@ HTML itself is considered too complex and wiki and Markdown SGML languages have 
 and easier to use than HTML.
 
 The problem with C++ and Scala is that they offer seductive ways to write clever code. It is easy to rationalize using
-complex constructs and libraries to solve relatively simple programming problems. For example in Scala, a simple 
+complex constructs and libraries to solve relatively simple programming problems. For example in Scala, a simple
 multithreaded application will be turned into a complicated messaging application using Akka. Such complex applications can
 be difficult to troubleshoot when they fail and difficult to comprehend and analyze when trying to extend or alter
 behavior. But such implementations keep appearing. Code of this type tends to give the programmer that wrote the code an
